@@ -1,0 +1,15 @@
+---
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx
+spec:
+  tower_ingress_type: Ingress
+  tower_web_resource_requirements:
+    requests:
+      cpu: 500m
+      memory: 256M
+  tower_task_resource_requirements:
+    requests:
+      cpu: 500m
+      memory: 256M
