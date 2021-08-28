@@ -8,12 +8,12 @@ spec:
   hostname: awx.k3s.endersgame.net
   web_resource_requirements:
     requests:
-      cpu: 500m
-      memory: 256M
+      cpu: 1000m
+      memory: 2Gi
   task_resource_requirements:
     requests:
       cpu: 500m
-      memory: 256M
+      memory: 1Gi
   ee_resource_requirements:
     requests:
       cpu: 500m
