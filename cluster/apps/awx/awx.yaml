@@ -4,13 +4,17 @@ kind: AWX
 metadata:
   name: awx
 spec:
-  tower_ingress_type: Ingress
-  tower_hostname: awx.k3s.endersgame.net
-  tower_web_resource_requirements:
+  ingress_type: Ingress
+  hostname: awx.k3s.endersgame.net
+  web_resource_requirements:
     requests:
       cpu: 500m
       memory: 256M
-  tower_task_resource_requirements:
+  task_resource_requirements:
     requests:
       cpu: 500m
       memory: 256M
+  ee_resource_requirements:
+    requests:
+      cpu: 500m
+      memory: 1Gi
