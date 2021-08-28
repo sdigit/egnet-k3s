@@ -1,0 +1,10 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: awx
+resources:
+- clusterrole-awx-operator.yaml
+- clusterrolebinding-awx-operator.yaml
+- deployment-awx-operator.yaml
+- serviceaccount-awx-operator.yaml
+- awx.yaml
