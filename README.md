@@ -25,7 +25,6 @@ Feel free to read up on any of these technologies before you get started to be m
 - [metallb](https://metallb.universe.tf/)
 - [cert-manager](https://cert-manager.io/) with Cloudflare DNS challenge
 - [ingress-nginx](https://kubernetes.github.io/ingress-nginx/)
-- [homer](https://github.com/bastienwirtz/homer)
 - [system-upgrade-controller](https://github.com/rancher/system-upgrade-controller)
 
 ## :memo:&nbsp; Prerequisites
@@ -335,13 +334,7 @@ kubectl --kubeconfig=./kubeconfig get pods -n flux-system
 
 ### Verify ingress
 
-If your cluster is not accessible to outside world you can update your hosts file to verify the ingress controller is working.
-
-```sh
-echo "${BOOTSTRAP_INGRESS_NGINX_LB} ${BOOTSTRAP_DOMAIN} homer.${BOOTSTRAP_DOMAIN}" | sudo tee -a /etc/hosts
-```
-
-Head over to your browser and you _should_ be able to access `https://homer.${BOOTSTRAP_DOMAIN}`
+Head over to your browser and you _should_ be able to access `https://vault.${BOOTSTRAP_DOMAIN}`
 
 ### direnv
 
@@ -392,7 +385,6 @@ Show the health of your `HelmRelease`s
 flux --kubeconfig=./kubeconfig get helmrelease -A
 # NAMESPACE   	    NAME                  	READY	MESSAGE                         	REVISION	SUSPENDED
 # cert-manager	    cert-manager          	True 	Release reconciliation succeeded	v1.3.0  	False
-# default        	homer                 	True 	Release reconciliation succeeded	4.2.0   	False
 # networking  	    ingress-nginx       	True 	Release reconciliation succeeded	3.29.0  	False
 ```
 
