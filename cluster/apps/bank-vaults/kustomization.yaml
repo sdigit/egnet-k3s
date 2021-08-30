@@ -5,4 +5,4 @@ namespace: vault
 resources:
 - helm-release.yaml
 - rbac.yaml
-- cr.yaml
+#- cr.yaml
