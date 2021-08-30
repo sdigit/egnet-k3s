@@ -1,0 +1,16 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: vault-operator
+  namespace: bank-vaults
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: vault-operator
+      version: 1.13.2
+      sourceRef:
+        kind: HelmRepository
+        name: banzaicloud-stable
+        namespace: flux-system
