@@ -64,7 +64,7 @@ spec:
 
   # Specify existing secret contains TLS certificate (accepted secret type: kubernetes.io/tls)
   # If it is set, generating certificate will be disabled
-  # existingTlsSecretName: selfsigned-cert-tls
+  existingTlsSecretName: vault-tls
 
   # Specify threshold for renewing certificates. Valid time units are "ns", "us", "ms", "s", "m", "h".
   # tlsExpiryThreshold: 168h
@@ -199,16 +199,16 @@ spec:
       value: "/vault/file"
 
   # If you are using a custom certificate and are setting the hostname in a custom way
-  # sidecarEnvsConfig:
-  #   - name: VAULT_ADDR
-  #     value: https://vault.local:8200
+  sidecarEnvsConfig:
+    - name: VAULT_ADDR
+      value: https://vault.k3s.endersgame.net:8200
 
   # # https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
-  # vaultPodSpec:
-  #   hostAliases:
-  #   - ip: "127.0.0.1"
-  #     hostnames:
-  #     - "vault.local"
+  vaultPodSpec:
+    hostAliases:
+    - ip: "127.0.0.1"
+      hostnames:
+      - "vault.k3s.endersgame.net"
 
   # It is possible to override the Vault container directly:
   # vaultContainerSpec:
