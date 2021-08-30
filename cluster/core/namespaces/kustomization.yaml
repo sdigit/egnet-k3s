@@ -5,4 +5,5 @@ resources:
 - metallb-system.yaml
 - networking.yaml
 - awx.yaml
-- vault.yaml
+#- vault.yaml
+- bank-vaults.yaml
