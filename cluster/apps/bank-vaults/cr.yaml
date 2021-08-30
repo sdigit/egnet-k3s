@@ -2,6 +2,9 @@ apiVersion: "vault.banzaicloud.com/v1alpha1"
 kind: "Vault"
 metadata:
   name: "vault"
+  annotations:
+    kustomize.toolkit.fluxcd.io/substitute: disabled
+
 spec:
   size: 1
   image: vault:1.8.2
@@ -10,7 +13,6 @@ spec:
 
   # Common annotations for all created resources
   annotations:
-    kustomize.toolkit.fluxcd.io/substitute: disabled
     common/annotation: "true"
 
   # Vault Pods , Services and TLS Secret annotations
