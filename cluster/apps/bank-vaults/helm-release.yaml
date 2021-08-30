@@ -8,6 +8,7 @@ spec:
   interval: 1m
   chart:
     spec:
+      # renovate: registryUrl=https://kubernetes-charts.banzaicloud.com
       chart: vault-operator
       version: 1.13.2
       sourceRef:
