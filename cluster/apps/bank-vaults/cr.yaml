@@ -155,7 +155,7 @@ spec:
   # If you are using a custom certificate and are setting the hostname in a custom way
   sidecarEnvsConfig:
     - name: VAULT_ADDR
-      value: https://vault.k3s.endersgame.net:8200
+      value: https://vault.k3s.endersgame.net
 
   # # https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
   vaultPodSpec:
