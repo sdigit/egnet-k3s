@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  annotations:
+  name: vault-tls
+spec:
+  commonName: vault.k3s.endersgame.net
+  dnsNames:
+  - vault.k3s.endersgame.net
+  issuerRef:
+    kind: ClusterIssuer
+    name: letsencrypt-production
+  secretName: vault-tls
