@@ -5,4 +5,3 @@ resources:
 - system-upgrade
 - awx
 - bank-vaults
-- cert-completer
