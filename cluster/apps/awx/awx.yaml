@@ -5,7 +5,7 @@ metadata:
   name: awx
 spec:
   ingress_type: Ingress
-  hostname: awx.k3s.endersgame.net
+  hostname: awx.k3s.vm.endersgame.net
   web_resource_requirements:
     requests:
       cpu: 1000m
