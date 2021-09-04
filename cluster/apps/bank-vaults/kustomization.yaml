@@ -4,5 +4,5 @@ kind: Kustomization
 resources:
 - vault-tls.yaml
 - helm-release.yaml
-# - rbac.yaml
-# - cr.yaml
+- rbac.yaml
+- cr.yaml
